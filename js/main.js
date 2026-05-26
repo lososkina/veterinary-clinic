@@ -138,21 +138,31 @@
     const image = item.dataset.serviceImage;
     const id = item.dataset.serviceId;
 
-    serviceImageWrap?.classList.add("is-changing");
-
     if (serviceTitle) serviceTitle.textContent = title;
     if (serviceDesc) serviceDesc.textContent = desc;
-    if (serviceImg) {
-      serviceImg.src = image;
-      serviceImg.alt = title;
-    }
     if (serviceBookBtn) {
       serviceBookBtn.setAttribute("data-service-preset", id);
     }
 
-    window.setTimeout(() => {
+    const finishImageChange = () => {
       serviceImageWrap?.classList.remove("is-changing");
-    }, 350);
+    };
+
+    if (serviceImg && image) {
+      serviceImageWrap?.classList.add("is-changing");
+      const preload = new Image();
+      preload.onload = () => {
+        serviceImg.src = image;
+        serviceImg.alt = title;
+        finishImageChange();
+      };
+      preload.onerror = () => {
+        serviceImg.src = image;
+        serviceImg.alt = title;
+        finishImageChange();
+      };
+      preload.src = image;
+    }
   }
 
   serviceItems.forEach((item) => {

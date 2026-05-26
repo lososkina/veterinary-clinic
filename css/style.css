@@ -541,7 +541,7 @@ header.is-scrolled {
 .service-detail {
   position: sticky;
   top: 120px;
-  min-height: 560px;
+  height: 560px;
   border-radius: 32px;
   overflow: hidden;
   box-shadow: var(--shadow);
@@ -549,11 +549,12 @@ header.is-scrolled {
 }
 
 .service-detail__image {
-  height: 100%;
-  min-height: 560px;
+  position: absolute;
+  inset: 0;
 }
 
 .service-detail__image img {
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -566,12 +567,12 @@ header.is-scrolled {
 
 .service-detail__body {
   position: absolute;
-  left: 18px;
-  right: 18px;
-  bottom: 18px;
+  left: 0;
+  right: 0;
+  bottom: 0;
   padding: 20px;
   border-radius: 24px;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 }
@@ -973,18 +974,7 @@ body.modal-open {
   .service-detail {
     position: relative;
     top: auto;
-  }
-
-  .service-detail__image {
-    height: 300px;
-  }
-
-  .service-detail {
-    min-height: 480px;
-  }
-
-  .service-detail__image {
-    min-height: 480px;
+    height: 480px;
   }
 
   .service-detail__body {
@@ -1080,11 +1070,7 @@ body.modal-open {
   }
 
   .service-detail {
-    min-height: 420px;
-  }
-
-  .service-detail__image {
-    min-height: 420px;
+    height: 420px;
   }
 
   .service-detail__body h3 {
@@ -1110,11 +1096,7 @@ body.modal-open {
   }
 
   .service-detail {
-    min-height: 360px;
-  }
-
-  .service-detail__image {
-    min-height: 360px;
+    height: 360px;
   }
 
   .team-card__photo {
