@@ -1,0 +1,931 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Хвостики и Ко — ветеринарная клиника</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container navbar">
+        <a href="#" class="logo">
+          <img
+            src="images/logo.svg"
+            alt="Хвостики и Ко"
+            width="152"
+            height="32"
+          />
+        </a>
+
+        <nav class="nav-links" aria-label="Основная навигация">
+          <a href="#services">Услуги</a>
+          <a href="#team">Наши специалисты</a>
+          <a href="#reviews">Отзывы</a>
+        </nav>
+
+        <button
+          type="button"
+          class="btn btn-secondary desktop-only"
+          data-open-modal="callback"
+        >
+          Связаться с нами
+        </button>
+
+        <button
+          class="burger"
+          type="button"
+          aria-label="Открыть меню"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <div class="mobile-menu__panel">
+        <a href="#services">Услуги</a>
+        <a href="#team">Наши специалисты</a>
+        <a href="#reviews">Отзывы</a>
+        <button
+          type="button"
+          class="btn btn-primary"
+          data-open-modal="callback"
+        >
+          Связаться с нами
+        </button>
+      </div>
+    </div>
+
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <svg
+            class="slider-line slider-line--above"
+            viewBox="0 0 171 113"
+            fill="none"
+            aria-hidden="true"
+          >
+            <path
+              class="slider-line__path"
+              d="M167.71 3.00048C167.71 3.00048 138.015 7.74473 121.748 17.1246C90.9612 34.8768 37.652 76.3203 69.4663 91.6087C97.1373 104.906 121.116 77.8689 116.831 55.427C111.879 29.4976 65.1181 56.1788 38.8538 73.0581C14.8722 88.4704 3.00006 109.314 3.00006 109.314"
+            />
+          </svg>
+
+          <div class="hero-tag">#1 Уход за питомцами с любовью</div>
+
+          <h1>Мы бережно заботимся о тех, кого вы любите больше всего</h1>
+
+          <p>
+            Наша команда обеспечивает комплексный уход, лечение, диагностику и
+            заботу о здоровье ваших питомцев.
+          </p>
+
+          <div class="hero-buttons" id="hero-buttons">
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-open-modal="appointment"
+            >
+              Записаться на приём
+            </button>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-open-modal="callback"
+            >
+              Оставить звонок
+            </button>
+          </div>
+        </div>
+
+        <div class="hero-slider">
+          <div class="slider" data-slider>
+            <div class="slider__track">
+              <div class="slider__slide">
+                <img
+                  src="images/hero/slider-4.jpg"
+                  alt="Счастливый питомец в клинике"
+                  width="900"
+                  height="1125"
+                />
+              </div>
+              <div class="slider__slide">
+                <img
+                  src="images/hero/slider-1.jpg"
+                  alt="Ветеринар осматривает собаку"
+                  width="900"
+                  height="1125"
+                />
+              </div>
+              <div class="slider__slide">
+                <img
+                  src="images/hero/slider-2.jpg"
+                  alt="Кот на приёме"
+                  width="900"
+                  height="1125"
+                />
+              </div>
+              <div class="slider__slide">
+                <img
+                  src="images/hero/slider-3.jpg"
+                  alt="Забота о питомце"
+                  width="900"
+                  height="1125"
+                />
+              </div>
+            </div>
+
+            <div class="slider__arrows">
+              <button
+                type="button"
+                class="slider__arrow"
+                data-slider-prev
+                aria-label="Предыдущий слайд"
+              >
+                ‹
+              </button>
+              <button
+                type="button"
+                class="slider__arrow"
+                data-slider-next
+                aria-label="Следующий слайд"
+              >
+                ›
+              </button>
+            </div>
+
+            <div class="slider__nav" aria-label="Навигация слайдера"></div>
+          </div>
+
+          <svg
+            class="slider-line slider-line--below"
+            viewBox="0 0 294 33"
+            fill="none"
+            aria-hidden="true"
+          >
+            <path
+              class="slider-line__path"
+              d="M2 30.5C2 30.5 11.5871 2 31.5 2C51.4129 2 61.5871 30.5 81.5 30.5C101.413 30.5 111.587 2 131.5 2C151.413 2 161.587 30.5 181.5 30.5C201.413 30.5 198.5 2 231.5 2C264.5 2 292 20 292 20"
+            />
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about" id="about">
+      <div class="container about-grid">
+        <div>
+          <h2 class="section-title">Клиника, где питомцам рады</h2>
+          <p class="section-subtitle">
+            Более 12 лет мы помогаем хвостикам чувствовать себя лучше — от
+            профилактики до сложной диагностики и стационара.
+          </p>
+          <p>
+            Современное оборудование, бережный подход и прозрачные рекомендации
+            для владельцев — всё, чтобы вы были спокойны за своего друга.
+          </p>
+
+          <div class="stats">
+            <div class="stat-card">
+              <strong>12+</strong>
+              <span>лет опыта</span>
+            </div>
+            <div class="stat-card">
+              <strong>8k+</strong>
+              <span>пациентов в год</span>
+            </div>
+            <div class="stat-card">
+              <strong>24/7</strong>
+              <span>экстренная помощь</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-image">
+          <img
+            src="images/about/woman.jpg"
+            alt="Интерьер ветеринарной клиники"
+            width="1000"
+            height="1000"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="section features">
+      <div class="container">
+        <h2 class="section-title">Почему выбирают нас</h2>
+        <p class="section-subtitle">
+          Комплексный подход и внимание к каждой мелочи.
+        </p>
+
+        <div class="features-grid">
+          <article class="feature-card">
+            <div class="icon">
+              <svg
+                width="33"
+                height="33"
+                viewBox="0 0 33 33"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M20.1079 8.563L23.2936 5.83326C23.9017 5.31229 24.7573 5.1929 25.4847 5.52753C26.2121 5.86216 26.6782 6.58959 26.6782 7.39027V17.3409C26.6782 23.2344 21.9005 28.012 16.007 28.012V28.012C10.1136 28.012 5.33594 23.2344 5.33594 17.3409V7.39027C5.33594 6.58959 5.80201 5.86216 6.5294 5.52753C7.2568 5.1929 8.11244 5.31229 8.72045 5.83326L11.9062 8.563C14.5596 7.62489 17.4545 7.62489 20.1079 8.563Z"
+                  stroke="#FF9900"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M16.0069 19.3412V19.3412C15.6385 19.3412 15.3399 19.0426 15.3399 18.6742V18.6742C15.3399 18.5514 15.4395 18.4519 15.5623 18.4519H16.4515C16.5743 18.4519 16.6738 18.5514 16.6738 18.6742V18.6742C16.6738 19.0426 16.3752 19.3412 16.0069 19.3412Z"
+                  stroke="#FF9900"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M13.0898 22.8425C13.41 23.1635 13.8448 23.3436 14.2981 23.343V23.343C15.2418 23.343 16.0068 22.578 16.0068 21.6343C16.0068 22.3254 16.4231 22.9484 17.0617 23.2129C17.7002 23.4774 18.4351 23.3312 18.9238 22.8425"
+                  stroke="#FF9900"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M16.0068 19.3418V21.6348"
+                  stroke="#FF9900"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M22.6777 17.0827L28.0133 16.1935"
+                  stroke="#FF9900"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M28.0133 21.3421L22.6777 20.4528"
+                  stroke="#FF9900"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M9.33751 17.0827L4.00195 16.1935"
+                  stroke="#FF9900"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M4.00195 21.3421L9.33751 20.4528"
+                  stroke="#FF9900"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M11.0879 13.8914C11.8246 13.1548 13.019 13.1548 13.7557 13.8914"
+                  stroke="#FF9900"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M18.2578 13.8914C18.9945 13.1548 20.1889 13.1548 20.9256 13.8914"
+                  stroke="#FF9900"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <h3>Точная диагностика</h3>
+            <p>
+              УЗИ, анализы и лаборатория на месте — быстрые ответы без лишних
+              поездок.
+            </p>
+          </article>
+          <article class="feature-card">
+            <div class="icon">
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M19.2416 16.1549H20.9423C22.1483 16.1549 23.1259 15.1773 23.1259 13.9713V13.9713C23.1263 13.392 22.8964 12.8362 22.4868 12.4265C22.0773 12.0167 21.5217 11.7864 20.9423 11.7864H20.2127V11.0648C20.2127 9.8581 19.2345 8.87988 18.0278 8.87988V8.87988C16.8218 8.87988 15.8442 9.8575 15.8442 11.0635V12.7575C15.8433 13.0077 15.7436 13.2474 15.5668 13.4244L13.0084 15.9868C12.8312 16.1634 12.5916 16.2631 12.3414 16.2643H10.6367C9.43075 16.2643 8.45313 17.2419 8.45313 18.4479V18.4479C8.45277 19.0272 8.68267 19.583 9.09221 19.9928C9.50175 20.4025 10.0574 20.6328 10.6367 20.6328H11.3663V21.3611C11.3663 22.5678 12.3446 23.546 13.5512 23.546V23.546C14.7562 23.5445 15.7322 22.5673 15.7322 21.3624V19.6617C15.733 19.4115 15.8328 19.1718 16.0096 18.9948L18.568 16.4364C18.7462 16.2567 18.9886 16.1554 19.2416 16.1549Z"
+                  stroke="#FF9900"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <circle
+                  cx="15.9991"
+                  cy="16.0001"
+                  r="12.005"
+                  stroke="#FF9900"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <h3>Лечение под контролем</h3>
+            <p>
+              Индивидуальные схемы терапии и сопровождение до полного
+              выздоровления.
+            </p>
+          </article>
+          <article class="feature-card">
+            <div class="icon">
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M15.2888 14.833V14.833C17.4988 14.833 19.2904 16.6246 19.2904 18.8347V18.8347C19.2904 19.5714 18.6932 20.1686 17.9566 20.1686H12.621C11.8843 20.1686 11.2871 19.5714 11.2871 18.8347V18.8347C11.2871 16.6246 13.0787 14.833 15.2888 14.833V14.833Z"
+                  stroke="#FF9900"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M22.3312 8.24641C26.2209 12.1361 26.2208 18.4425 22.3311 22.3322C18.4415 26.2218 12.1351 26.2218 8.2454 22.3322C4.35572 18.4425 4.3557 12.1361 8.24534 8.24641C10.1132 6.37849 12.6467 5.3291 15.2883 5.3291C17.9299 5.3291 20.4633 6.37849 22.3312 8.24641"
+                  stroke="#FF9900"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M26.6712 26.6712L22.332 22.332"
+                  stroke="#FF9900"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M11.2847 11.8315C11.1008 11.8323 10.9521 11.9819 10.9526 12.1659C10.9531 12.3499 11.1025 12.4987 11.2865 12.4985C11.4705 12.4982 11.6196 12.349 11.6196 12.165C11.6199 12.0762 11.5847 11.991 11.5218 11.9283C11.4589 11.8657 11.3735 11.8308 11.2847 11.8315"
+                  stroke="#FF9900"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M19.2887 11.8315C19.1047 11.8323 18.956 11.9819 18.9565 12.1659C18.957 12.3499 19.1064 12.4987 19.2904 12.4985C19.4744 12.4982 19.6235 12.349 19.6235 12.165C19.6238 12.0762 19.5886 11.991 19.5257 11.9283C19.4628 11.8657 19.3774 11.8308 19.2887 11.8315"
+                  stroke="#FF9900"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M15.2867 10.498C15.1027 10.4988 14.9541 10.6484 14.9546 10.8324C14.9551 11.0164 15.1045 11.1652 15.2885 11.165C15.4725 11.1647 15.6215 11.0155 15.6215 10.8315C15.6219 10.7427 15.5867 10.6575 15.5238 10.5948C15.4609 10.5322 15.3755 10.4973 15.2867 10.498"
+                  stroke="#FF9900"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <h3>Стационар</h3>
+            <p>
+              Круглосуточное наблюдение и комфортные палаты для восстановления.
+            </p>
+          </article>
+          <article class="feature-card">
+            <div class="icon">
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M26.6709 14.1606V26.6712"
+                  stroke="#FF9900"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M6.66182 26.6713H2.66016"
+                  stroke="#FF9900"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M15.9997 22.6694V22.6694C18.2098 22.6694 20.0014 24.461 20.0014 26.6711V26.6711C20.0014 27.4078 19.4042 28.005 18.6675 28.005H13.3319C12.5952 28.005 11.998 27.4078 11.998 26.6711V26.6711C11.998 24.461 13.7897 22.6694 15.9997 22.6694Z"
+                  stroke="#FF9900"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M5.3271 14.1582V26.6714"
+                  stroke="#FF9900"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M25.0029 14.6662V14.6662C26.6605 14.6662 28.0042 13.3225 28.0042 11.665V11.4956C28.0042 10.9518 27.8563 10.4183 27.576 9.95226L24.7748 5.29032C24.2937 4.4884 23.4277 3.99698 22.4925 3.99512H9.5058C8.56931 3.99512 7.70139 4.48616 7.21906 5.2889L4.41701 9.95226C4.13862 10.4188 3.99245 10.9523 3.99416 11.4956V11.665C3.99416 13.3225 5.33788 14.6662 6.99542 14.6662V14.6662"
+                  stroke="#FF9900"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M29.3376 26.6713H25.3359"
+                  stroke="#FF9900"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M25.0036 14.6662C23.6754 14.6662 22.5051 13.7935 22.1261 12.5206C22.1137 12.4622 22.0621 12.4204 22.0023 12.4204C21.9426 12.4204 21.891 12.4622 21.8786 12.5206C21.4996 13.7936 20.3293 14.6662 19.0011 14.6662C17.6729 14.6662 16.5026 13.7936 16.1236 12.5206C16.1112 12.4622 16.0596 12.4204 15.9998 12.4204C15.9401 12.4204 15.8885 12.4622 15.8761 12.5206C15.4971 13.7936 14.3268 14.6662 12.9986 14.6662C11.6704 14.6662 10.5001 13.7936 10.1211 12.5206C10.1087 12.4622 10.0571 12.4204 9.99734 12.4204C9.93762 12.4204 9.88604 12.4622 9.87363 12.5206C9.49457 13.7935 8.32425 14.6662 6.99609 14.6662"
+                  stroke="#FF9900"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M16.3324 18.6683C16.3322 18.8524 16.1829 19.0015 15.9988 19.0014C15.8148 19.0013 15.6656 18.8521 15.6655 18.6681C15.6654 18.484 15.8145 18.3347 15.9985 18.3344C16.0871 18.3343 16.1721 18.3695 16.2348 18.4321C16.2974 18.4948 16.3326 18.5797 16.3324 18.6683"
+                  stroke="#FF9900"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M20.3344 20.0023C20.3342 20.1864 20.1848 20.3355 20.0008 20.3354C19.8167 20.3353 19.6675 20.1861 19.6675 20.002C19.6674 19.818 19.8164 19.6687 20.0005 19.6684C20.0891 19.6683 20.1741 19.7035 20.2367 19.7661C20.2994 19.8287 20.3345 19.9137 20.3344 20.0023"
+                  stroke="#FF9900"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M12.3305 20.0023C12.3303 20.1864 12.1809 20.3355 11.9969 20.3354C11.8128 20.3353 11.6636 20.1861 11.6636 20.002C11.6635 19.818 11.8125 19.6687 11.9966 19.6684C12.0852 19.6683 12.1702 19.7035 12.2328 19.7661C12.2955 19.8287 12.3306 19.9137 12.3305 20.0023"
+                  stroke="#FF9900"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <h3>Забота и эмпатия</h3>
+            <p>
+              Спокойная атмосфера, чтобы питомцу было меньше стресса на приёме.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="container">
+        <h2 class="section-title">Наши услуги</h2>
+        <p class="section-subtitle">
+          Всё необходимое для здоровья вашего питомца в одном месте.
+        </p>
+
+        <div class="services-layout">
+          <div class="service-list" role="tablist" aria-label="Список услуг">
+            <button
+              type="button"
+              class="service-item is-active"
+              role="tab"
+              aria-selected="true"
+              data-service-id="therapy"
+              data-service-title="Терапия и профилактика"
+              data-service-desc="Плановые осмотры, диагностика, назначение лечения и рекомендации по уходу. Помогаем поддерживать здоровье питомца на всех этапах жизни."
+              data-service-image="images/services/banner-1.jpg"
+            >
+              <span>Терапия и профилактика</span><span>→</span>
+            </button>
+            <button
+              type="button"
+              class="service-item"
+              role="tab"
+              aria-selected="false"
+              data-service-id="vaccination"
+              data-service-title="Вакцинация"
+              data-service-desc="Составим индивидуальный график прививок, проведём осмотр перед вакцинацией и выдадим ветеринарный паспорт."
+              data-service-image="images/services/banner-2.jpg"
+            >
+              <span>Вакцинация</span><span>→</span>
+            </button>
+            <button
+              type="button"
+              class="service-item"
+              role="tab"
+              aria-selected="false"
+              data-service-id="surgery"
+              data-service-title="Хирургия"
+              data-service-desc="Плановые и экстренные операции в стерильных условиях с современной анестезией и послеоперационным наблюдением."
+              data-service-image="images/services/banner-3.jpg"
+            >
+              <span>Хирургия</span><span>→</span>
+            </button>
+            <button
+              type="button"
+              class="service-item"
+              role="tab"
+              aria-selected="false"
+              data-service-id="dentistry"
+              data-service-title="Стоматология"
+              data-service-desc="Чистка зубов, лечение заболеваний полости рта и профилактика — без боли и с бережным отношением к питомцу."
+              data-service-image="images/services/banner-4.jpg"
+            >
+              <span>Стоматология</span><span>→</span>
+            </button>
+            <button
+              type="button"
+              class="service-item"
+              role="tab"
+              aria-selected="false"
+              data-service-id="grooming"
+              data-service-title="Груминг и гигиена"
+              data-service-desc="Стрижка, мытьё, уход за шерстью и когтями. Питомец выглядит аккуратно, а вы получаете рекомендации по домашнему уходу."
+              data-service-image="images/services/banner-5.jpg"
+            >
+              <span>Груминг и гигиена</span><span>→</span>
+            </button>
+            <button
+              type="button"
+              class="service-item"
+              role="tab"
+              aria-selected="false"
+              data-service-id="chipping"
+              data-service-title="Чипирование"
+              data-service-desc="Безопасная установка микрочипа и регистрация данных — чтобы ваш питомец быстрее нашёлся, если потеряется."
+              data-service-image="images/services/banner-1.jpg"
+            >
+              <span>Чипирование</span><span>→</span>
+            </button>
+          </div>
+
+          <div class="service-detail" role="tabpanel">
+            <div class="service-detail__image">
+              <img
+                id="service-banner-img"
+                src="images/services/banner-1.jpg"
+                alt="Терапия и профилактика"
+                width="900"
+                height="1200"
+              />
+            </div>
+            <div class="service-detail__body">
+              <h3 id="service-detail-title">Терапия и профилактика</h3>
+              <p id="service-detail-desc">
+                Плановые осмотры, диагностика, назначение лечения и рекомендации
+                по уходу. Помогаем поддерживать здоровье питомца на всех этапах
+                жизни.
+              </p>
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-open-modal="appointment"
+                data-service-preset="therapy"
+              >
+                Записаться на приём
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="team">
+      <div class="container">
+        <h2 class="section-title">Наши специалисты</h2>
+        <p class="section-subtitle">
+          Команда врачей с узкой специализацией и большим сердцем.
+        </p>
+
+        <div class="team-grid">
+          <article class="team-card">
+            <div class="team-card__photo">
+              <img
+                src="images/team/vet-1.jpg"
+                alt="Анна Морозова"
+                width="600"
+                height="600"
+              />
+            </div>
+            <div class="team-card__body">
+              <h3>Анна Морозова</h3>
+              <p>Главный ветеринар · терапия</p>
+            </div>
+          </article>
+          <article class="team-card">
+            <div class="team-card__photo">
+              <img
+                src="images/team/vet-4.jpg"
+                alt="Михаил Кузнецов"
+                width="600"
+                height="600"
+              />
+            </div>
+            <div class="team-card__body">
+              <h3>Михаил Кузнецов</h3>
+              <p>Анестезиология · стационар</p>
+            </div>
+          </article>
+          <article class="team-card">
+            <div class="team-card__photo">
+              <img
+                src="images/team/vet-3.jpg"
+                alt="Игорь Волков"
+                width="600"
+                height="600"
+              />
+            </div>
+            <div class="team-card__body">
+              <h3>Игорь Волков</h3>
+              <p>Хирург · ортопедия</p>
+            </div>
+          </article>
+
+          <article class="team-card">
+            <div class="team-card__photo">
+              <img
+                src="images/team/vet-2.jpg"
+                alt="Елена Соколова"
+                width="600"
+                height="600"
+              />
+            </div>
+            <div class="team-card__body">
+              <h3>Елена Соколова</h3>
+              <p>Диагностика · УЗИ</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="reviews">
+      <div class="container">
+        <div class="reviews-box">
+          <div>
+            <p class="review-text">
+              «Привели кота с острой болью — приняли сразу, всё объяснили
+              понятно. Через два дня Султан уже бегал как ни в чём не бывало.
+              Спасибо всей команде!»
+            </p>
+            <p class="review-author">— Лера Рыжулева, кот Султан</p>
+          </div>
+
+          <div class="review-gallery">
+            <img
+              src="images/reviews/pet-1.jpg"
+              alt="Отзыв — питомец 1"
+              width="500"
+              height="500"
+            />
+            <img
+              src="images/reviews/pet-2.jpg"
+              alt="Отзыв — питомец 2"
+              width="500"
+              height="500"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" id="contacts">
+      <div class="cta-prints">
+        <img
+          class="cta-print cta-print--1"
+          src="images/cta/animal-print-1.svg"
+          alt=""
+          aria-hidden="true"
+        />
+        <img
+          class="cta-print cta-print--2"
+          src="images/cta/animal-print-1-1.svg"
+          alt=""
+          aria-hidden="true"
+        />
+        <img
+          class="cta-print cta-print--3"
+          src="images/cta/animal-print-1-2.svg"
+          alt=""
+          aria-hidden="true"
+        />
+      </div>
+      <div class="container cta__inner">
+        <h2>Запишитесь на приём сегодня</h2>
+        <p>
+          Позвоните или оставьте заявку — мы подберём удобное время и ответим на
+          все вопросы.
+        </p>
+        <div class="cta__actions">
+          <button
+            type="button"
+            class="btn btn-primary"
+            data-open-modal="appointment"
+          >
+            Оформить заявку
+          </button>
+          <button
+            type="button"
+            class="btn btn-secondary cta-btn-outline"
+            data-open-modal="callback"
+          >
+            Оставить звонок
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container footer-grid">
+        <div>
+          <div class="footer-logo">
+            <img
+              src="images/logo2.svg"
+              alt="Хвостики и Ко"
+              width="152"
+              height="32"
+            />
+          </div>
+          <p style="color: rgba(255, 255, 255, 0.72); max-width: 320px">
+            Ветеринарная клиника полного цикла. Забота, диагностика и лечение с
+            любовью к каждому хвостику.
+          </p>
+        </div>
+
+        <div>
+          <div class="footer-links">
+            <a href="#services">Услуги</a>
+            <a href="#team">Специалисты</a>
+            <a href="#reviews">Отзывы</a>
+            <a href="#about">О клинике</a>
+          </div>
+        </div>
+
+        <div>
+          <a href="tel:+74951234567" class="footer-phone">+7 (495) 123-45-67</a>
+          <p style="color: rgba(255, 255, 255, 0.72)">
+            Москва, ул. Примерная, 12<br />Ежедневно 9:00 — 21:00
+          </p>
+        </div>
+      </div>
+
+      <p class="copyright">© 2026 Хвостики и Ко. Все права защищены.</p>
+    </footer>
+
+    <div class="modal" id="modal-callback" aria-hidden="true">
+      <div class="modal__overlay" data-modal-close tabindex="-1"></div>
+      <div
+        class="modal__dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-callback-title"
+      >
+        <button
+          type="button"
+          class="modal__close"
+          data-modal-close
+          aria-label="Закрыть"
+        >
+          ×
+        </button>
+        <h2 class="modal__title" id="modal-callback-title">Оставить звонок</h2>
+        <p class="modal__subtitle">
+          Оставьте контакты — перезвоним в ближайшее время.
+        </p>
+        <form class="modal-form" data-form="callback">
+          <label class="field">
+            <span>ФИО</span>
+            <input type="text" name="name" required placeholder="Иван Иванов" />
+          </label>
+          <label class="field">
+            <span>Телефон или email</span>
+            <input
+              type="text"
+              name="contact"
+              required
+              placeholder="+7 999 000-00-00 или mail@example.com"
+            />
+          </label>
+          <label class="field">
+            <span>Сообщение</span>
+            <textarea
+              name="message"
+              rows="4"
+              placeholder="Удобное время для звонка, вопрос…"
+            ></textarea>
+          </label>
+          <button type="submit" class="btn btn-primary btn-block">
+            Отправить
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div class="modal" id="modal-appointment" aria-hidden="true">
+      <div class="modal__overlay" data-modal-close tabindex="-1"></div>
+      <div
+        class="modal__dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-appointment-title"
+      >
+        <button
+          type="button"
+          class="modal__close"
+          data-modal-close
+          aria-label="Закрыть"
+        >
+          ×
+        </button>
+        <h2 class="modal__title" id="modal-appointment-title">
+          Оформить заявку
+        </h2>
+        <p class="modal__subtitle">
+          Заполните форму — мы свяжемся и подберём время приёма.
+        </p>
+        <form class="modal-form" data-form="appointment">
+          <label class="field">
+            <span>Email</span>
+            <input
+              type="email"
+              name="email"
+              required
+              placeholder="mail@example.com"
+            />
+          </label>
+          <label class="field">
+            <span>ФИО</span>
+            <input type="text" name="name" required placeholder="Иван Иванов" />
+          </label>
+          <label class="field">
+            <span>Услуга</span>
+            <select name="service" id="appointment-service" required>
+              <option value="therapy">Терапия и профилактика</option>
+              <option value="vaccination">Вакцинация</option>
+              <option value="surgery">Хирургия</option>
+              <option value="dentistry">Стоматология</option>
+              <option value="grooming">Груминг и гигиена</option>
+              <option value="chipping">Чипирование</option>
+            </select>
+          </label>
+          <label class="field">
+            <span>Питомец</span>
+            <input
+              type="text"
+              name="pet"
+              required
+              placeholder="Кличка, вид, порода"
+            />
+          </label>
+          <label class="field">
+            <span>Что беспокоит</span>
+            <textarea
+              name="concern"
+              rows="4"
+              required
+              placeholder="Опишите симптомы или цель визита"
+            ></textarea>
+          </label>
+          <button type="submit" class="btn btn-primary btn-block">
+            Отправить заявку
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
