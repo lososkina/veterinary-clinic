@@ -1011,6 +1011,21 @@ body.modal-open {
     height: 88px;
     right: 5%;
   }
+
+  /* Изображения: компактнее на планшетах */
+  .slider__slide {
+    aspect-ratio: 16 / 13;
+  }
+
+  .about-image {
+    aspect-ratio: auto;
+    height: 420px;
+  }
+
+  .team-card__photo {
+    aspect-ratio: auto;
+    height: 320px;
+  }
 }
 
 @media (max-width: 640px) {
@@ -1079,5 +1094,35 @@ body.modal-open {
   .service-detail__body p {
     font-size: 15px;
     line-height: 1.5;
+  }
+
+  /* Изображения: компактнее на телефонах */
+  .hero-slider {
+    padding: 6px 0 36px;
+  }
+
+  .slider__slide {
+    aspect-ratio: 16 / 11;
+  }
+
+  .about-image {
+    height: 280px;
+  }
+
+  .service-detail {
+    min-height: 360px;
+  }
+
+  .service-detail__image {
+    min-height: 360px;
+  }
+
+  .team-card__photo {
+    height: 240px;
+  }
+
+  .review-gallery img {
+    aspect-ratio: auto;
+    height: 220px;
   }
 }
